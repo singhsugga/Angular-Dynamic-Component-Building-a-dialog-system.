@@ -1,0 +1,27 @@
+<div
+  class="overlay"
+  (click)="onOverlayClicked($event)"
+  [ngClass]="{
+    top: position === 'TOP',
+    right: position === 'RIGHT',
+    bottom: position === 'BOTTOM',
+    left: position === 'LEFT',
+    center: position === 'CENTER',
+    black: background === 'black'
+  }"
+>
+  <div
+    class="dialog"
+    [class.animate]="animation"
+    (click)="onDialogClicked($event)"
+    [ngClass]="{
+      top: position === 'TOP',
+      right: position === 'RIGHT',
+      bottom: position === 'BOTTOM',
+      left: position === 'LEFT',
+      center: position === 'CENTER'
+    }"
+  >
+    <ng-template srjInsertion></ng-template>
+  </div>
+</div>
